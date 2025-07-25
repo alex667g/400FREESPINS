@@ -36,22 +36,19 @@
       box-shadow: 0 0 10px rgba(0,0,0,.55);
     }
 
-    /* АНИМИРОВАННЫЕ СВЕТЯЩИЕСЯ КНОПКИ */
     .button {
       display: block;
       padding: 10px 20px;
-      margin: 12px 0;
+      margin: 10px 0;
       font-size: 13px;
       font-weight: 600;
       color: #fff;
       text-decoration: none;
       border-radius: var(--card-radius);
-      background: linear-gradient(270deg, #1e90ff, #ff4d4f, #1e90ff);
-      background-size: 600% 600%;
-      animation: gradientFlow 6s ease infinite, pulseGlow 2.5s ease-in-out infinite;
-      box-shadow: 0 0 10px rgba(255,255,255,0.15);
-      transition: transform .2s ease;
-      text-shadow: 0 0 5px rgba(0,0,0,0.5);
+      background-size: 300% 300%;
+      animation: gradientFlow 6s ease infinite, glowPulse 2.5s ease-in-out infinite;
+      text-shadow: 0 0 4px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
     }
 
     .button:hover {
@@ -64,60 +61,9 @@
       100% { background-position: 0% 50%; }
     }
 
-    @keyframes pulseGlow {
+    @keyframes glowPulse {
       0% {
-        box-shadow: 0 0 8px rgba(255,255,255,0.2), 0 0 16px rgba(255,255,255,0.1);
+        box-shadow: 0 0 6px rgba(255,255,255,0.2), 0 0 12px rgba(255,255,255,0.1);
       }
       50% {
-        box-shadow: 0 0 16px rgba(255,255,255,0.45), 0 0 32px rgba(255,255,255,0.2);
-      }
-      100% {
-        box-shadow: 0 0 8px rgba(255,255,255,0.2), 0 0 16px rgba(255,255,255,0.1);
-      }
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 1.4;
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <img
-      src="https://i.ibb.co/twbsRKgr/Gates-of-Olympus-Super-Scatter.png"
-      alt="Profile"
-      class="profile-img"
-    />
-    <h2 style="font-size: 14px;">
-      400 БЕСПЛАТНЫХ ВРАЩЕНИЙ МОЖНО ЗАБРАТЬ В ЛЮБОМ ПРОЕКТЕ НИЖЕ 👇🎁<br>
-      ❗️ВАЖНО ПЕРЕД ЗАХОДОМ НА САЙТ ВЫКЛЮЧИТЬ ВПН ❗️
-    </h2>
-
-    <a href="https://martin-way-three.com/cd2290196" class="button">
-      🇰🇿 🇷🇺 MARTIN НОВЫЙ КАЗ 400 FS 🇰🇿 🇷🇺 
-    </a>
-    
-    <a href="https://flagman-way-three.com/ce6f08c03" class="button">
-      🇰🇿 🇷🇺 FLAGMAN 400 FS 🇰🇿 🇷🇺 
-    </a>
-
-    <a href="https://rwn-blcp01.com/ca6857fb7" class="button">
-      🇰🇿 🇷🇺 IRWIN 400 FS 🇰🇿 🇷🇺
-    </a>
-
-    <a href="https://mnr-blcp01.com/c5aa1b0a1" class="button">
-      🇰🇿 🇷🇺 MONRO 400 FS 🇰🇿 🇷🇺 
-    </a>
-
-    <a href="https://ping.partners-links.fun/sl?id=663cdce3f91873f117ce1dde&pid=1711" class="button">
-      🎁 GET A 400 FREE SPINS BONUS 🇰🇿 🇺🇦 🇧🇾 🇩🇪 🇫🇷 🇬🇧 🇵🇱 🇨🇦 🇺🇸 🇳🇱 as well as other countries
-    </a>
-
-    <a href="https://t.me/spins_bonuss" class="button">
-      📢 Telegram: бонусы, розыгрыши, ваучеры
-    </a>
-  </div>
-</body>
-</html>
+        box-shadow:
