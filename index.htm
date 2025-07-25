@@ -10,7 +10,6 @@
       --bg: #000;
       --text: #fff;
       --card-radius: 9999px;
-      --gradient: linear-gradient(90deg, #1e90ff 0%, #ff4d4f 100%);
     }
 
     * { box-sizing: border-box; }
@@ -37,6 +36,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,.55);
     }
 
+    /* Общие стили для кнопок */
     .button {
       display: block;
       padding: 10px 20px;
@@ -45,26 +45,41 @@
       font-weight: 600;
       color: #fff;
       text-decoration: none;
-      background: var(--gradient);
       border-radius: var(--card-radius);
-      box-shadow: 0 4px 14px rgba(0,0,0,.35);
-      transition: transform .18s, box-shadow .18s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      background-size: 400% 400%;
+      animation: glowing 6s ease infinite;
+      transition: transform 0.2s;
     }
 
     .button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.45);
+      transform: translateY(-3px);
     }
 
-    .button:active {
-      transform: translateY(0);
-      box-shadow: 0 3px 10px rgba(0,0,0,.4);
+    .button-red {
+      background: linear-gradient(270deg, #ff4d4f, #ff7f50, #ff4d4f);
     }
 
-    p {
+    .button-blue {
+      background: linear-gradient(270deg, #1e90ff, #00bfff, #1e90ff);
+    }
+
+    .button-green {
+      background: linear-gradient(270deg, #32cd32, #7fff00, #32cd32);
+    }
+
+    .button-purple {
+      background: linear-gradient(270deg, #8a2be2, #da70d6, #8a2be2);
+    }
+
+    @keyframes glowing {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h2 {
       font-size: 14px;
-      line-height: 1.4;
-      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -75,32 +90,32 @@
       alt="Profile"
       class="profile-img"
     />
-    <h2 style="font-size: 14px;">
+    <h2>
       400 БЕСПЛАТНЫХ ВРАЩЕНИЙ МОЖНО ЗАБРАТЬ В ЛЮБОМ ПРОЕКТЕ НИЖЕ 👇🎁<br>
       ❗️ВАЖНО ПЕРЕД ЗАХОДОМ НА САЙТ ВЫКЛЮЧИТЬ ВПН ❗️
     </h2>
 
-    <a href="https://martin-way-three.com/cd2290196" class="button">
+    <a href="https://martin-way-three.com/cd2290196" class="button button-red">
       🇰🇿 🇷🇺 MARTIN НОВЫЙ КАЗ 400 FS 🇰🇿 🇷🇺 
     </a>
     
-    <a href="https://flagman-way-three.com/ce6f08c03" class="button">
+    <a href="https://flagman-way-three.com/ce6f08c03" class="button button-blue">
       🇰🇿 🇷🇺 FLAGMAN 400 FS 🇰🇿 🇷🇺 
     </a>
 
-    <a href="https://rwn-blcp01.com/ca6857fb7" class="button">
+    <a href="https://rwn-blcp01.com/ca6857fb7" class="button button-green">
       🇰🇿 🇷🇺 IRWIN 400 FS 🇰🇿 🇷🇺
     </a>
 
-    <a href="https://mnr-blcp01.com/c5aa1b0a1" class="button">
+    <a href="https://mnr-blcp01.com/c5aa1b0a1" class="button button-purple">
       🇰🇿 🇷🇺 MONRO 400 FS 🇰🇿 🇷🇺 
     </a>
 
-    <a href="https://ping.partners-links.fun/sl?id=663cdce3f91873f117ce1dde&pid=1711" class="button">
+    <a href="https://ping.partners-links.fun/sl?id=663cdce3f91873f117ce1dde&pid=1711" class="button button-blue">
       🎁 GET A 400 FREE SPINS BONUS 🇰🇿 🇺🇦 🇧🇾 🇩🇪 🇫🇷 🇬🇧 🇵🇱 🇨🇦 🇺🇸 🇳🇱 as well as other countries
     </a>
 
-    <a href="https://t.me/spins_bonuss" class="button">
+    <a href="https://t.me/spins_bonuss" class="button button-green">
       📢 Telegram: бонусы, розыгрыши, ваучеры
     </a>
   </div>
