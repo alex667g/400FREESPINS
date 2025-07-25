@@ -36,6 +36,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,.55);
     }
 
+    /* АНИМИРОВАННЫЕ СВЕТЯЩИЕСЯ КНОПКИ */
     .button {
       display: block;
       padding: 10px 20px;
@@ -45,17 +46,18 @@
       color: #fff;
       text-decoration: none;
       border-radius: var(--card-radius);
-      background-size: 400% 400%;
+      background: linear-gradient(270deg, #1e90ff, #ff4d4f, #1e90ff);
+      background-size: 600% 600%;
       animation: gradientFlow 6s ease infinite, pulseGlow 2.5s ease-in-out infinite;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s;
+      box-shadow: 0 0 10px rgba(255,255,255,0.15);
+      transition: transform .2s ease;
+      text-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
 
     .button:hover {
       transform: translateY(-4px);
     }
 
-    /* УНИВЕРСАЛЬНЫЙ ГРАДИЕНТ ПЕРЕЛИВА */
     @keyframes gradientFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -64,43 +66,20 @@
 
     @keyframes pulseGlow {
       0% {
-        box-shadow: 0 0 6px rgba(255,255,255,0.2), 0 0 12px rgba(255,255,255,0.1);
+        box-shadow: 0 0 8px rgba(255,255,255,0.2), 0 0 16px rgba(255,255,255,0.1);
       }
       50% {
-        box-shadow: 0 0 14px rgba(255,255,255,0.4), 0 0 28px rgba(255,255,255,0.2);
+        box-shadow: 0 0 16px rgba(255,255,255,0.45), 0 0 32px rgba(255,255,255,0.2);
       }
       100% {
-        box-shadow: 0 0 6px rgba(255,255,255,0.2), 0 0 12px rgba(255,255,255,0.1);
+        box-shadow: 0 0 8px rgba(255,255,255,0.2), 0 0 16px rgba(255,255,255,0.1);
       }
     }
 
-    /* ИНДИВИДУАЛЬНЫЕ СТИЛИ КНОПОК */
-    .blue {
-      background: linear-gradient(270deg, #1e90ff, #00bfff, #1e90ff);
-    }
-
-    .red {
-      background: linear-gradient(270deg, #ff4d4f, #ff7f50, #ff4d4f);
-    }
-
-    .green {
-      background: linear-gradient(270deg, #32cd32, #7fff00, #32cd32);
-    }
-
-    .purple {
-      background: linear-gradient(270deg, #8a2be2, #da70d6, #8a2be2);
-    }
-
-    .orange {
-      background: linear-gradient(270deg, #ff8c00, #ffa500, #ff8c00);
-    }
-
-    .cyan {
-      background: linear-gradient(270deg, #00ffff, #40e0d0, #00ffff);
-    }
-
-    h2 {
+    p {
       font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -111,32 +90,32 @@
       alt="Profile"
       class="profile-img"
     />
-    <h2>
+    <h2 style="font-size: 14px;">
       400 БЕСПЛАТНЫХ ВРАЩЕНИЙ МОЖНО ЗАБРАТЬ В ЛЮБОМ ПРОЕКТЕ НИЖЕ 👇🎁<br>
       ❗️ВАЖНО ПЕРЕД ЗАХОДОМ НА САЙТ ВЫКЛЮЧИТЬ ВПН ❗️
     </h2>
 
-    <a href="https://martin-way-three.com/cd2290196" class="button red">
+    <a href="https://martin-way-three.com/cd2290196" class="button">
       🇰🇿 🇷🇺 MARTIN НОВЫЙ КАЗ 400 FS 🇰🇿 🇷🇺 
     </a>
     
-    <a href="https://flagman-way-three.com/ce6f08c03" class="button blue">
+    <a href="https://flagman-way-three.com/ce6f08c03" class="button">
       🇰🇿 🇷🇺 FLAGMAN 400 FS 🇰🇿 🇷🇺 
     </a>
 
-    <a href="https://rwn-blcp01.com/ca6857fb7" class="button green">
+    <a href="https://rwn-blcp01.com/ca6857fb7" class="button">
       🇰🇿 🇷🇺 IRWIN 400 FS 🇰🇿 🇷🇺
     </a>
 
-    <a href="https://mnr-blcp01.com/c5aa1b0a1" class="button purple">
+    <a href="https://mnr-blcp01.com/c5aa1b0a1" class="button">
       🇰🇿 🇷🇺 MONRO 400 FS 🇰🇿 🇷🇺 
     </a>
 
-    <a href="https://ping.partners-links.fun/sl?id=663cdce3f91873f117ce1dde&pid=1711" class="button cyan">
-      🎁 GET A 400 FREE SPINS BONUS 🌍 🇺🇸 🇬🇧 🇫🇷 🇺🇦 🇩🇪 🇳🇱
+    <a href="https://ping.partners-links.fun/sl?id=663cdce3f91873f117ce1dde&pid=1711" class="button">
+      🎁 GET A 400 FREE SPINS BONUS 🇰🇿 🇺🇦 🇧🇾 🇩🇪 🇫🇷 🇬🇧 🇵🇱 🇨🇦 🇺🇸 🇳🇱 as well as other countries
     </a>
 
-    <a href="https://t.me/spins_bonuss" class="button orange">
+    <a href="https://t.me/spins_bonuss" class="button">
       📢 Telegram: бонусы, розыгрыши, ваучеры
     </a>
   </div>
