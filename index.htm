@@ -10,7 +10,7 @@
       --bg: #000;
       --text: #fff;
       --card-radius: 9999px;
-      --gradient: linear-gradient(90deg, #1e90ff 0%, #ff4d4f 100%);
+      --gradient: linear-gradient(270deg, #1e90ff, #ff4d4f, #1e90ff);
     }
 
     * { box-sizing: border-box; }
@@ -45,20 +45,40 @@
       font-weight: 600;
       color: #fff;
       text-decoration: none;
-      background: var(--gradient);
       border-radius: var(--card-radius);
-      box-shadow: 0 4px 14px rgba(0,0,0,.35);
-      transition: transform .18s, box-shadow .18s;
+      background: var(--gradient);
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite, glowPulse 2.5s ease-in-out infinite;
+      box-shadow: 0 0 10px rgba(255,255,255,0.15);
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-shadow: 0 0 4px rgba(0,0,0,0.4);
     }
 
     .button:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.45);
     }
 
     .button:active {
       transform: translateY(0);
       box-shadow: 0 3px 10px rgba(0,0,0,.4);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 6px rgba(255,255,255,0.2), 0 0 12px rgba(255,255,255,0.1);
+      }
+      50% {
+        box-shadow: 0 0 14px rgba(255,255,255,0.4), 0 0 28px rgba(255,255,255,0.2);
+      }
+      100% {
+        box-shadow: 0 0 6px rgba(255,255,255,0.2), 0 0 12px rgba(255,255,255,0.1);
+      }
     }
 
     p {
