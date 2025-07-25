@@ -8,9 +8,8 @@
   <style>
     :root {
       --bg: #000;
-      --text: #fff;
+      --text: #eeeeee;
       --card-radius: 9999px;
-      --gradient: linear-gradient(90deg, #1e90ff 0%, #ff4d4f 100%);
     }
 
     * { box-sizing: border-box; }
@@ -18,7 +17,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding: 24px;
     }
@@ -37,34 +36,65 @@
       box-shadow: 0 0 10px rgba(0,0,0,.55);
     }
 
+    /* Общие стили кнопок */
     .button {
       display: block;
-      padding: 10px 20px;
-      margin: 10px 0;
-      font-size: 13px;
-      font-weight: 600;
-      color: #fff;
+      padding: 12px 20px;
+      margin: 12px 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
       text-decoration: none;
-      background: var(--gradient);
       border-radius: var(--card-radius);
-      box-shadow: 0 4px 14px rgba(0,0,0,.35);
-      transition: transform .18s, box-shadow .18s;
+      background-size: 300% 300%;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+      animation: pulse-glow 5s ease infinite, gradientShift 6s ease infinite;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s;
     }
 
     .button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,.45);
+      transform: translateY(-3px);
     }
 
-    .button:active {
-      transform: translateY(0);
-      box-shadow: 0 3px 10px rgba(0,0,0,.4);
+    .button-red {
+      background: linear-gradient(270deg, #ff4d4f, #ff7f50, #ff4d4f);
     }
 
-    p {
+    .button-blue {
+      background: linear-gradient(270deg, #1e90ff, #00bfff, #1e90ff);
+    }
+
+    .button-green {
+      background: linear-gradient(270deg, #32cd32, #7fff00, #32cd32);
+    }
+
+    .button-purple {
+      background: linear-gradient(270deg, #8a2be2, #da70d6, #8a2be2);
+    }
+
+    /* Перелив фона */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Светящееся пульсирующее свечение */
+    @keyframes pulse-glow {
+      0% {
+        box-shadow: 0 0 8px rgba(255,255,255,0.15), 0 0 16px rgba(255,255,255,0.1);
+      }
+      50% {
+        box-shadow: 0 0 16px rgba(255,255,255,0.35), 0 0 32px rgba(255,255,255,0.2);
+      }
+      100% {
+        box-shadow: 0 0 8px rgba(255,255,255,0.15), 0 0 16px rgba(255,255,255,0.1);
+      }
+    }
+
+    h2 {
       font-size: 14px;
-      line-height: 1.4;
-      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -75,33 +105,33 @@
       alt="Profile"
       class="profile-img"
     />
-    <h2 style="font-size: 14px;">
+    <h2>
       400 БЕСПЛАТНЫХ ВРАЩЕНИЙ МОЖНО ЗАБРАТЬ В ЛЮБОМ ПРОЕКТЕ НИЖЕ 👇🎁<br>
       ❗️ВАЖНО ПЕРЕД ЗАХОДОМ НА САЙТ ВЫКЛЮЧИТЬ ВПН ❗️
     </h2>
 
-    <a href="https://martin-way-three.com/cd2290196" class="button">
-      🇰🇿 🇷🇺 MARTIN НОВЫЙ КАЗ 400 FS 🇰🇿 🇷🇺 
+    <a href="https://martin-way-three.com/cd2290196" class="button button-red">
+      🎰 MARTIN — 400 FS для Казахстана 🇰🇿🇷🇺
     </a>
     
-    <a href="https://flagman-way-three.com/ce6f08c03" class="button">
-      🇰🇿 🇷🇺 FLAGMAN 400 FS 🇰🇿 🇷🇺 
+    <a href="https://flagman-way-three.com/ce6f08c03" class="button button-blue">
+      🎰 FLAGMAN — бесплатные 400 вращений 🇰🇿🇷🇺
     </a>
 
-    <a href="https://rwn-blcp01.com/ca6857fb7" class="button">
-      🇰🇿 🇷🇺 IRWIN 400 FS 🇰🇿 🇷🇺
+    <a href="https://rwn-blcp01.com/ca6857fb7" class="button button-green">
+      🎰 IRWIN — бонус на 400 фриспинов 🇰🇿🇷🇺
     </a>
 
-    <a href="https://mnr-blcp01.com/c5aa1b0a1" class="button">
-      🇰🇿 🇷🇺 MONRO 400 FS 🇰🇿 🇷🇺 
+    <a href="https://mnr-blcp01.com/c5aa1b0a1" class="button button-purple">
+      🎰 MONRO — забери 400 FS сейчас 🇰🇿🇷🇺
     </a>
 
-    <a href="https://ping.partners-links.fun/sl?id=663cdce3f91873f117ce1dde&pid=1711" class="button">
-      🎁 GET A 400 FREE SPINS BONUS 🇰🇿 🇺🇦 🇧🇾 🇩🇪 🇫🇷 🇬🇧 🇵🇱 🇨🇦 🇺🇸 🇳🇱 as well as other countries
+    <a href="https://ping.partners-links.fun/sl?id=663cdce3f91873f117ce1dde&pid=1711" class="button button-blue">
+      🌍 400 FS для 🇺🇦 🇩🇪 🇫🇷 🇬🇧 🇺🇸 🇳🇱 и других стран
     </a>
 
-    <a href="https://t.me/spins_bonuss" class="button">
-      📢 Telegram: бонусы, розыгрыши, ваучеры
+    <a href="https://t.me/spins_bonuss" class="button button-green">
+      📢 Telegram — розыгрыши, бонусы, ваучеры
     </a>
   </div>
 </body>
