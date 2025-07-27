@@ -48,8 +48,8 @@
       border-radius: var(--card-radius);
       background: var(--gradient);
       background-size: 300% 300%;
-      animation: gradientMove 6s ease infinite, glowPulse 2.5s ease-in-out infinite;
-      box-shadow: 0 0 12px rgba(0,0,139,0.15);
+      animation: gradientMove 6s ease infinite, glowPulse 1.5s ease-in-out infinite;
+      box-shadow: 0 0 8px rgba(0, 0, 139, 0.3);
       transition: transform .2s ease, box-shadow .2s ease;
       text-shadow: 0 0 4px rgba(0,0,0,0.4);
     }
@@ -70,14 +70,11 @@
     }
 
     @keyframes glowPulse {
-      0% {
-        box-shadow: 0 0 6px rgba(0, 0, 139, 0.2), 0 0 12px rgba(0, 0, 139, 0.1);
+      0%, 100% {
+        box-shadow: 0 0 2px rgba(0, 0, 139, 0.1), 0 0 4px rgba(0, 0, 139, 0.05);
       }
       50% {
-        box-shadow: 0 0 14px rgba(0, 0, 139, 0.4), 0 0 28px rgba(0, 0, 139, 0.2);
-      }
-      100% {
-        box-shadow: 0 0 6px rgba(0, 0, 139, 0.2), 0 0 12px rgba(0, 0, 139, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.9), 0 0 40px rgba(0, 0, 255, 0.6);
       }
     }
 
